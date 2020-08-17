@@ -8,6 +8,9 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { ShowsComponent } from './pages/shows/shows.component';
 import { ActorsComponent } from './pages/actors/actors.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +19,11 @@ import { FooterComponent } from './components/footer/footer.component';
     MoviesComponent,
     ShowsComponent,
     ActorsComponent,
-    FooterComponent
+    FooterComponent,
+    MovieCardComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
