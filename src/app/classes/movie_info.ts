@@ -5,6 +5,7 @@ import { ProductionCompany } from './production_company';
 import { ProductionCountry } from './production_country';
 import { SpokenLanguage } from './spoken_language';
 import { Credits } from './credits';
+import { Videos } from './videos';
 
 export interface MovieInfo {
     adult: boolean;
@@ -34,4 +35,5 @@ export interface MovieInfo {
     vote_count: number;
     images: Images;
     credits: Credits;
+    videos: Videos;
   }

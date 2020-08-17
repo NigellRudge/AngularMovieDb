@@ -26,7 +26,8 @@ export class MovieService {
   }
 
   public getMovieDetails(movieId: number): Observable<MovieInfo>{
-    const url = `${this.base_url}/${movieId}?api_key=${API_KEY}`;
+    const url = `${this.base_url}/${movieId}?api_key=${API_KEY}&append_to_response=images,credits,videos`;
+    //console.log(`url called: ${url}`);
     return this.http.get<MovieInfo>(url);
   }
 
@@ -46,7 +47,8 @@ export class MovieService {
   }
 
   public getSimilarMovies(movieId: number, page: number = 1): Observable<MovieResponse>{
-    const url = `${BASE_URL}/movie/${movieId}/similar/movie?api_key=${API_KEY}&page=${page}`;
+    const url = `${BASE_URL}/movie/${movieId}/similar?api_key=${API_KEY}&page=${page}`;
+    console.log(url);
     return this.http.get<MovieResponse>(url);
   }
 }
