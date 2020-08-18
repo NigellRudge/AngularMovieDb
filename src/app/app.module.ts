@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { MovieDetailComponent } from './pages/movie-detail/movie-detail.component';
 import { CastCardComponent } from './components/cast-card/cast-card.component';
+import { ShowCardComponent } from './components/show-card/show-card.component';
+import { ShowDetailComponent } from './pages/show-detail/show-detail.component';
+import { SeasonCardComponent } from './components/season-card/season-card.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { CastCardComponent } from './components/cast-card/cast-card.component';
     FooterComponent,
     MovieCardComponent,
     MovieDetailComponent,
-    CastCardComponent
+    CastCardComponent,
+    ShowCardComponent,
+    ShowDetailComponent,
+    SeasonCardComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,1 +1,28 @@
-<p>shows works!</p>
+<div class="container mx-auto px-4 pt-10"> 
+    <!-- Popular Movies -->
+    <div class="popular-movies">
+        <h2 class="uppercase tracking-wider text-orange-500 text-lg font-semibold">
+            Top Rated shows
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div *ngFor="let show of topRatedShows">
+                <app-show-card [show]="show"></app-show-card>
+            </div>    
+        </div>
+    </div>
+            
+
+    <!-- NowPlaying -->
+    <div class="popular-movies py-24">
+        <h2 class="uppercase tracking-wider text-orange-500 text-lg font-semibold">
+            Now airing
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div *ngFor="let show of nowAiringShows">
+                <app-show-card [show]="show"></app-show-card>
+            </div>    
+        </div>
+    </div>
+</div>

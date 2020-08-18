@@ -33,7 +33,6 @@ export class MovieDetailComponent implements OnInit {
         if(this.movie.images.backdrops.length < 10){
           this.imageArrayLength = this.movie.images.backdrops.length;
         }
-
         this.getSimilarMovies(this.movie.id);
       });
   }
