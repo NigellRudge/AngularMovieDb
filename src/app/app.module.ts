@@ -15,6 +15,10 @@ import { CastCardComponent } from './components/cast-card/cast-card.component';
 import { ShowCardComponent } from './components/show-card/show-card.component';
 import { ShowDetailComponent } from './pages/show-detail/show-detail.component';
 import { SeasonCardComponent } from './components/season-card/season-card.component';
+import { SeasonDetailComponent } from './pages/season-detail/season-detail.component';
+import { EpisodeCardComponent } from './components/episode-card/episode-card.component';
+import { EpisodeDetailComponent } from './pages/episode-detail/episode-detail.component';
+import { ActorDetailComponent } from './pages/actor-detail/actor-detail.component';
 
 
 @NgModule({
@@ -30,7 +34,11 @@ import { SeasonCardComponent } from './components/season-card/season-card.compon
     CastCardComponent,
     ShowCardComponent,
     ShowDetailComponent,
-    SeasonCardComponent
+    SeasonCardComponent,
+    SeasonDetailComponent,
+    EpisodeCardComponent,
+    EpisodeDetailComponent,
+    ActorDetailComponent
   ],
   imports: [
     HttpClientModule,

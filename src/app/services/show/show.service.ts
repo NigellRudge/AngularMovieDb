@@ -7,6 +7,8 @@ import { GenreResponse } from 'src/app/classes/genre_response';
 import { ShowInfo } from 'src/app/classes/show_info';
 import { SeasonInfo } from 'src/app/classes/season_info';
 import { EpisodeInfo } from 'src/app/classes/episode_info';
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -63,5 +65,4 @@ export class ShowService {
     const url = `${BASE_URL}/tv/${showId}/similar?api_key=a28d205a378cece6baa18ba20119765b&language=en-US&page=${page}`;
     return this.httpClient.get<ShowResponse>(url);
   }
-
 }

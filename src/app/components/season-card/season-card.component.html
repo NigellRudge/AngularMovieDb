@@ -1,9 +1,9 @@
 <div class="mt-8">
-    <a routerLink="/show">
+    <a routerLink="/show/{{show}}/season/{{season.season_number}}">
         <img src="{{season.poster_path}}" alt="picture" class="hover:opacity-75 transition ease-in-out duration-150">
     </a>
     <div class="mt-2">
-        <a href="" class="text-lg mt-2 hover:text-gray:300">{{season.name}}</a>
+        <a routerLink="show/{{show}}/season/{{season.season_number}}" class="text-lg mt-2 hover:text-gray:300">{{season.name}}</a>
         <div class="text-sm text-gray-400">
             <span class="text-lg font-semibold text-orange-500">
                 Season {{season.season_number}}

@@ -56,7 +56,7 @@
         <h2 class="text-4xl font-semibold">Seasons</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             <ng-template ngFor let-season [ngForOf]="show.seasons" let-i="index">
-                <app-season-card [season] ="season" [showPoster]="show.poster_path" [showId]="show.id" ></app-season-card>
+                <app-season-card [season] ="season" [showPoster]="show.poster_path" [show]="show.id" ></app-season-card>
             </ng-template> 
         </div>
     </div>

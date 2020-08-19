@@ -9,9 +9,11 @@ import { MEDIA_URL } from 'src/app/services/config/config';
 })
 export class SeasonCardComponent implements OnInit {
   @Input()
+  show: number;
+  @Input()
   season: Season;
   @Input()
-  showPoster: string = '';
+  showPoster = '';
   constructor() { }
 
   ngOnInit(): void {
