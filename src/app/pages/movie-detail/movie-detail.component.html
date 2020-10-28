@@ -1,6 +1,6 @@
 <div class="movie-info border-b border-gray-800">
     <div class="container mx-auto px-4 py-16 flex">
-         <img src="{{movie.poster_path}}" alt="picture" class="w-96">
+         <img src="{{movie.poster_path}}" alt="picture" class="w-96 rounded">
 
          <div class="ml-24">
              <h2 class="text-4xl font-semibold">{{movie.title}}</h2>
@@ -11,7 +11,7 @@
                  <span>{{movie.release_date }} </span>
                  <span class="mx-2">|</span>
                  <ng-template ngFor let-genre [ngForOf]="movie.genres" let-i="index">
-                    <span class="ml-1">{{genre.name}},</span>
+                    <span class="hover:bg-orange-600 hover:font-semibold bg-orange-700 text-xs rounded-lg px-2 py-1 mr-1">{{genre.name}}</span>
                   </ng-template>
              </div>
 
@@ -20,7 +20,7 @@
                 {{movie.overview}}
              </p>
 
-             
+
              <div class="mt-12">
                  <h4 class="text-orange-500 font-semibold">Feaured Crew</h4>
                  <div class="flex mt-2">
@@ -39,21 +39,21 @@
                  </div>
              </div>
          </div>
-     </div> 
+     </div>
  </div>
 
 
  <div class="movie-cast border-b border-gray-800">
      <div class="container mx-auto px-4 py-10">
          <h2 class="text-4xl font-semibold text-orange-500">Cast</h2>
-         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">           
+         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
              <ng-template ngFor let-castMember [ngForOf]="movie.credits.cast.slice(0,10)" let-i="index">
                 <app-cast-card [castMember]="castMember"></app-cast-card>
               </ng-template>
          </div>
      </div>
  </div>
-     
+
      <div class="movie-images">
          <div class="container mx-auto px-4 py-10">
              <h2 class="text-4xl mx-auto px-4 py-10 text-orange-500">Images</h2>
@@ -61,7 +61,7 @@
                  <ng-template ngFor let-image [ngForOf]="movie.images.backdrops.slice(0,imageArrayLength)" let-i="index">
                     <div class="mt-8">
                         <a href="#">
-                            <img src="https://image.tmdb.org/t/p/w500{{image.file_path}}" alt="image1" class="hover:opacity-75 transition ease-in-out duration-150">
+                            <img src="https://image.tmdb.org/t/p/w500{{image.file_path}}" alt="image1" class="hover:shadow-outline rounded transition ease-in-out duration-150">
                         </a>
                     </div>
                   </ng-template>
@@ -72,7 +72,7 @@
     <div *ngIf = "similarMovies.length > 0" class="movie-cast border-b border-gray-800">
         <div class="container mx-auto px-4 py-10">
             <h2 class="text-4xl font-semibold text-orange-500">Similar Movies</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">           
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 <ng-template ngFor let-movie [ngForOf]="similarMovies" let-i="index">
                    <app-movie-card [movie]="movie"></app-movie-card>
                  </ng-template>

@@ -4,4 +4,4 @@ export interface CreatedBy {
     name: string;
     gender: number;
     profile_path: string;
-  }
+}

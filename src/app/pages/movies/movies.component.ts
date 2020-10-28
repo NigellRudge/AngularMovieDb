@@ -22,7 +22,7 @@ export class MoviesComponent implements OnInit {
     this.movieService.getPopularMovies()
       .subscribe(response => {
         this.popularMovies = response.results;
-        //console.log(response.results);
+        // console.log(response.results);
       });
   }
 
@@ -30,7 +30,7 @@ export class MoviesComponent implements OnInit {
     this.movieService.getNowPlayingMovies()
       .subscribe(response => {
         this.nowPlayingMovies = response.results;
-        //console.log(response.results);
+        // console.log(response.results);
       });
   }
 

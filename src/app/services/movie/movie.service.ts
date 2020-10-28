@@ -10,24 +10,24 @@ import { Genre } from 'src/app/classes/genre';
   providedIn: 'root'
 })
 export class MovieService {
-  private base_url = `${BASE_URL}/movie`;
+  private baseUrl = `${BASE_URL}/movie`;
 
   constructor(private http: HttpClient) { }
 
   public getPopularMovies(page: number = 1): Observable<MovieResponse>{
-    const url = `${this.base_url}/popular?api_key=${API_KEY}&page=${page}`;
+    const url = `${this.baseUrl}/popular?api_key=${API_KEY}&page=${page}`;
     return this.http.get<MovieResponse>(url);
   }
 
   public getNowPlayingMovies(page: number = 1): Observable<MovieResponse>{
-    const url = `${this.base_url}/now_playing?api_key=${API_KEY}&page=${page}`;
+    const url = `${this.baseUrl}/now_playing?api_key=${API_KEY}&page=${page}`;
     console.log(`url:${url}`);
     return this.http.get<MovieResponse>(url);
   }
 
   public getMovieDetails(movieId: number): Observable<MovieInfo>{
-    const url = `${this.base_url}/${movieId}?api_key=${API_KEY}&append_to_response=images,credits,videos`;
-    //console.log(`url called: ${url}`);
+    const url = `${this.baseUrl}/${movieId}?api_key=${API_KEY}&append_to_response=images,credits,videos`;
+    // console.log(`url called: ${url}`);
     return this.http.get<MovieInfo>(url);
   }
 
@@ -37,7 +37,7 @@ export class MovieService {
   }
 
   public getTopRatedrMovies(page: number = 1): Observable<MovieResponse>{
-    const url = `${this.base_url}/top_rated?api_key=${API_KEY}&page=${page}`;
+    const url = `${this.baseUrl}/top_rated?api_key=${API_KEY}&page=${page}`;
     return this.http.get<MovieResponse>(url);
   }
 

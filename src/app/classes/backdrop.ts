@@ -6,4 +6,4 @@ export interface Backdrop {
     vote_average: number;
     vote_count: number;
     width: number;
-  }
+}

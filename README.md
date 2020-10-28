@@ -1,27 +1,16 @@
-# MoviedbAngular
+This project was created for test purposes only. The UI for this applicaiton was based on [Laravel movie example](https://github.com/drehimself/laravel-movies-example)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+![movie_react_app2](https://user-images.githubusercontent.com/29778020/97433468-54e43800-18fc-11eb-967e-69b206039d4c.png)
+# MovieDb Angular
+This application allows users to view upcoming and popular movies and shows.
+The data for this project was provided by [TheMovieDatabase](https://www.themoviedb.org/) Api Service 
 
-## Development server
+This application was build using the following technologies:
+1. [Angular](https://angular.io/)
+2. [Angular Cli](https://cli.angular.io/)
+3. [TailwindCSS](https://tailwindcss.com/) (ng-tailwindcss)
+4. [RXJS](https://rxjs-dev.firebaseapp.com/guide/overview)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Todo
+1. Adding loading indicators
+2. Add State Management like [NgRx](https://ngrx.io/)

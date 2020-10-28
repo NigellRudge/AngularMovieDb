@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieInfo } from 'src/app/classes/movie_info';
 import { MovieService } from 'src/app/services/movie/movie.service';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import { Movie } from 'src/app/classes/movie';
 import { MEDIA_URL } from 'src/app/services/config/config';
 
@@ -16,11 +16,12 @@ export class MovieDetailComponent implements OnInit {
   similarMovies: Movie[];
   imageArrayLength = 10;
 
-  constructor(private movieService: MovieService, private route: ActivatedRoute) { }
+  constructor(private movieService: MovieService, private route: ActivatedRoute, private router: Router) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  }
 
   ngOnInit(): void {
     this.movieId = Number(this.route.snapshot.paramMap.get('id'));
-    // console.log(this.movieId);
     this.getMovie(this.movieId);
   }
 
@@ -43,5 +44,9 @@ export class MovieDetailComponent implements OnInit {
             console.log(data);
             this.similarMovies = data.results.length > 5 ? data.results.slice(0, 5) : data.results;
         });
+  }
+
+  onMovieClick(): void {
+
   }
 }

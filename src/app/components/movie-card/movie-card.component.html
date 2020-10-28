@@ -1,6 +1,6 @@
 <div class="mt-8">
     <a routerLink="/movie/{{movie.id}}">
-            <img src="{{movie.poster_path}}" alt="picture" class="hover:opacity-75 transition ease-in-out duration-150">
+            <img src="{{movie.poster_path}}" alt="picture" class="hover:shadow-outline rounded transition ease-in-out duration-150">
     </a>
     <div class="mt-2">
         <a routerLink="/movie/{{movie.id}}" class="text-lg mt-2 hover:text-gray-300">{{movie.title}}</a>
@@ -10,10 +10,10 @@
             <span class="mx-2">|</span>
             <span>{{movie.release_date }} </span>
         </div>
-        <div class="text-gray-400 text-sm">
-            <span class="ml-1">Action,</span> 
-            <span class="ml-1">Adventure,</span> 
-            <span class="ml-1">Science-Fiction</span>             
-        </div>
+      <div class="text-gray-400 text-sm py-1 flex flex-wrap">
+        <a  class="ml-1 hover:bg-orange-600 hover:font-semibold bg-orange-700 text-xs rounded-lg px-2 py-1 mr-1 mt-1">Action,</a>
+        <a   class="ml-1 hover:bg-orange-600 hover:font-semibold bg-orange-700 text-xs rounded-lg px-2 py-1 mr-1  mt-1">Adventure,</a>
+        <a   class="ml-1 hover:bg-orange-600 hover:font-semibold bg-orange-700 text-xs rounded-lg px-2 py-1 mr-1 mt-1">Science-Fiction</a>
+      </div>
     </div>
 </div>
